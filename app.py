@@ -23,6 +23,11 @@ def page_not_found(error):
 @app.route('/')
 def home():
     return 'My home page'
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
     
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8080)
